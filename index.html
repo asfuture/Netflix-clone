@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <!-- Responsividade-->
+    <link rel="stylesheet" href="style/responsive.css">
+    <!-- Owl css-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    <title>NETFLIX CLONE</title>
+</head>
+    <body>
+        <header>
+            <div class="container">
+                <h2 class="logo">NETFLIX</h2>
+                <!--Menu principal-->
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Documentários</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!--Capa do filme principal-->
+            <div class="filme-principal">
+                <div class="container">
+                    <h3 class="titulo">SUITS</h3>
+                    <p class="descricao">Mesmo sem se formar e sem licença para advogar, um jovem brilhante impressiona um importante advogado e consegue uma cobiçada posição em sua firma.</p>
+                    <div class="botoes">
+                        <a href="https://www.netflix.com/watch/70283145?trackId=14277283&tctx=-97%2C-97%2C%2C%2C%2C"> <button role="button" class="botao">
+                            <i class="fas fa-play"></i>
+                            ASSISTIR AGORA
+                        </button>
+                    </a>
+                        <button onclick="trailer()" role="button" class="botao">
+                            <i class="fas fa-info-circle"></i>
+                            MAIS INFORMAÇÕES
+                        </button>
+                     </div>
+                </div>
+            </div>
+        </main>
+        <!--Demais filmes-->
+        <div class="carrosel-filmes">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img class="box-filme" src="img/mini1.jpg" alt="" srcset="">
+                </div>
+                <div class="item">
+                    <img class="box-filme" src="img/mini2.jpg" alt="" srcset="">
+                </div>
+                <div class="item">
+                    <img class="box-filme" src="img/mini3.jpg" alt="" srcset="">
+                </div>
+                <div class="item">
+                    <img class="box-filme" src="img/mini4.jpg" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img class="box-filme" src="img/mini5.jpg" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img class="box-filme" src="img/mini6.jpg" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img class="box-filme" src="img/mini7.jpg" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img class="box-filme" src="img/mini8.jpg" alt="" srcset="">
+                </div>
+        
+                <div class="item">
+                    <img class="box-filme" src="img/mini9.jpg" alt="" srcset="">
+                </div>
+
+                <div class="item">
+                    <img class="box-filme" src="img/mini10.jpg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/f23b9dc459.js"></script>
+        <script src="js/owl/jquery.min.js"></script>
+        <script src="js/owl/owl.carousel.min.js"></script>
+        <script src="js/owl/setup.js"></script>
+
+        <!--Modal com informações do filme principal da capa-->
+        <div id="modal">
+            <div class="modal-filmes">
+                <!--Video do youtube-->
+                <iframe width="900" height="500" src="https://www.youtube.com/embed/ImEnWAVRLU0?controls=0&amp;start=18" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+            </div>
+            <!--Controle dos botões do modal e video do youtube-->
+               <div class="button-controle">
+                <a href="https://www.netflix.com/watch/70283145?trackId=14277283&tctx=-97%2C-97%2C%2C%2C%2C"><button class="assistir"><i class="fas fa-play"></i> Assistir</button> </a>
+                <button onclick="adicionar_filme()" class="plus">+</button>
+                <button onclick="like()" class="positive"><i class="far fa-thumbs-up"></i></button>
+                <button onclick="dislike()" class="negative"><i class="far fa-thumbs-down"></i></button>
+                <button onclick="com_audio()" class="volume"><i class="fas fa-volume-up"></i></button>
+                <button  onclick="sem_audio()" class="volume_baixo"><i class="fas fa-volume-mute"></i></button>
+                <button class="close" onclick="sair()">&times;</i></button>
+               </div> 
+               <!--Descrição do primeiro episodio e o nomes do elenco-->
+               <div class="resumo">
+                   <div class="temporada">
+                       <div class="ano-temporada">
+                           2019  <span>14</span> 1 Temporada
+                       </div>
+                       <div class="episodio-detalhe">
+                           <h3>T1:E1 "Piloto: Partes 1 e 2"</h3>
+                           <p>Harvey é promovido e precisa recrutar um formando da faculdade de harvad.
+                               Ele escolhe Mike Ross, mas há um problema:Mike não tem diploma.
+                           </p>
+                       </div>
+                   </div>
+
+                   <div class="descricao-serie">
+                        <div>
+                            <span>Elenco:</span><a href="">Gabriel Macht,</a><a href=""> Patrik J.Adams,</a>
+                             <a href=""> Rick Hoffman, </a><a href=""> mais</a>
+                        </div>
+                       
+                       <div>
+                            <span>Gêneros:</span><a href=""> Séries dramaticas, </a><a href="">Comédias para TV,</a>
+                             <a href=""> Séries dos EUA</a>
+                        </div>
+                        <div>
+                             <span>Cenas e momentos: </span><a href=""> Espeituosos</a>
+                        </div>
+                   </div>
+            </div>
+            <!--Escolhe temporada-->
+            <div class="temporada-episodio">
+                <div class="episodios">
+                    <p class="p-episodio">Episódio</p>
+                    <select name="seleciona-episodio" id="seleciona">
+                        <option value="temporada01">Temporada 1</option>
+                        <option value="temporada01">Temporada 1 (12 Episódio)</option>
+                        <option value="temporada02">Temporada 2 (16 Episódio)</option>
+                        <option value="temporada03">Temporada 3 (16 Episódio)</option>
+                        <option value="temporada04">Temporada 4 (16 Episódio)</option>
+                        <option value="temporada05">Temporada 5 (16 Episódio)</option>
+                        <option value="temporada06">Temporada 6 (16 Episódio)</option>
+                        <option value="temporada07">Temporada 7 (16 Episódio)</option>
+                        <option value="temporada08">Temporada 8 (16 Episódio)</option>
+                        <option value="temporada09">Temporada 9 (10 Episódio)</option>
+                    </select>
+                </div>
+            </div> 
+            <!--Todos os episodios de cada temporada-->
+            <div class="episodio-item">
+                <div class="ep">
+                    <h3>1</h3>
+                    <img src="img/foto1.webp" alt="" width="110px" height="70px">
+                     <div>
+                        <div class="titulo-ep">Piloto:partes 1 e 2 <span>42min</span></div>
+                        <p>
+                        Harvey é promovido e precisa recrutar um formando da faculdade de harvad.
+                        Ele escolhe Mike Ross, mas há um problema:Mike não tem diploma.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>2</h3>
+                    <img src="img/foto2.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Erros e omissões<span>19min</span></div>
+                        <p>
+                        Um caso supostamente simples se transforma em pesadelo quando Harvey é acusado de
+                        conduta inapropriada com uma mulher casada. 
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>3</h3>
+                    <img src="img/foto3.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Vantagens<span>42min</span></div>
+                        <p>
+                        Jessica acreditava que a promoção do Harvey o colocanria sob seu controle
+                        mas ele faz decisões sem consultá-la logo na primeira crise.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>4</h3>
+                    <img src="img/foto4.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Segredinhos sujos<span>28min</span></div>
+                        <p>
+                        Harvey defende uma pessoa ligada ao passado de Jessica e a relação entre eles é colocada á prova.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>5</h3>
+                    <img src="img/foto5.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Fiança <span>22min</span></div>
+                        <p>
+                        Mike entra numa enrascada quando um velho amigo reaparece e pede sua ajuda.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>6</h3>
+                    <img src="img/foto6.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Ossos do ofício<span>41min</span></div>
+                        <p>
+                        Harvey e Mike tentam salvar uma mulher injustamente acusada de um crime de colarinho branco.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>7</h3>
+                    <img src="img/foto7.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Conheça o adversário<span>32min</span></div>
+                        <p>
+                        Mike tem a oportunidade de testar suas habilidades diante de Kyle, oprotegido de Louis, em um jugamento simulado.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>8</h3>
+                    <img src="img/foto8.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Crise de identidade<span>12min</span></div>
+                        <p>
+                        Mike precisa deter um Robin Hood moderno cujos atos ilícitos estão colocando em risco a empresa de um clinte.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>9</h3>
+                    <img src="img/foto9.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Invicto<span>45min</span></div>
+                        <p>
+                        Harvey está sempre um passo atrás de um advogado invicto porém desonesto, e precisa decidir se está disposto a sacrificar a ética para ganhar a causa.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>10</h3>
+                    <img src="img/foto10.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Vida de fachada<span>45min</span></div>
+                        <p>
+                        A empatia de Mike por um executivo dispensado prejudica a relação da firma com o clinte e Harvey acaba tendo que protege Mike da raiva da Jessica.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>11</h3>
+                    <img src="img/foto5.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">A regra do jogo<span>22min</span></div>
+                        <p>
+                        O ex-mentor de Harvey pede sua ajuda quando seu escritório passa a ser investigado.
+                        </p>
+                    </div>
+                </div>
+                <div class="ep">
+                    <h3>12</h3>
+                    <img src="img/foto5.webp" alt="" width="110px" height="70px">
+                    <div>
+                        <div class="titulo-ep">Briga de cachorro grande<span>30min</span></div>
+                        <p>
+                        Harvey faz tudo para tirar um homem inocente da prisão, mas acaba batendo de frente com o novo promotor público.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="t-semelhante">Titulos semelhantes</p>
+                    <!--Filmes recomendados-->
+                    <div class="grid-container">
+                         <!--Filmes recomendados 1-->
+                            <div>
+                            <div class="t-s-span">
+                                <span></span> <span>1 temporada</span>
+                            </div>
+
+                            <img src="img/fotosemelhante1.webp" width="269px" alt="">
+                            <span style="color: #2F2F2F;">98% relevante</span>
+                            <div class="limite-idade">
+                                <span>14</span> <p>2021</p>
+                            </div>
+                            <p>
+                                Sedutor, golpista e mestre do disfarce. Na sombra do passado, ele não quer recuperar o tempo, só saber a verdade.
+                            </p>
+                        </div>
+                        
+                        <!--Filmes recomendados 2-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>1 temporada</span>
+                            </div>
+                                <img src="img/fotosemelhante2.webp" width="269px" alt="">
+                                <span style="color: #2F2F2F;">98% relevante</span>
+                                <div class="limite-idade">
+                                    <span>16</span> <p>2020</p>
+                                </div>
+                                <p>
+                                    Ela quer se casar por amor. Ele prometeu nunca subir ao altar.A paixão entre os dois está prestes a sair do controle.
+                                </p>
+                        </div>
+
+                        <!--Filmes recomendados 3-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>1 temporada</span>
+                            </div>
+                                <img src="img/fotosemelhante3.webp" width="269px" alt="">
+                                <span>98% relevante</span>
+                                <div class="limite-idade">
+                                    <span>16</span> <p>2021</p>
+                                </div>
+                                <p>
+                                    Fama e fortuna para uma, amor e familia para outra. Amigas de longa data, elas são muito diferentes e muito leais.
+                                </p> 
+                        </div>
+
+                        <!--Filmes recomendados 4-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>7 temporada</span>
+                            </div>
+                                <img src="img/fotosemelhante4.webp" width="269px" alt="">
+                                <span>83% relevante</span>
+                                <div class="limite-idade">
+                                    <span>18</span> <p>2019</p>
+                                </div>
+                                <p>
+                                    Entre rivalidades e romances, elas tentam resistir a um sistema injusto.
+                                </p>
+                        </div>
+
+                        <!--Filmes recomendados 5-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>4 temporada</span>
+                            </div>
+                            <img src="img/fotosemelhante5.webp" width="269px" alt=""> 
+                            <span>95% relevante</span>    
+                            <div class="limite-idade">
+                                <span>16</span> <p>2019</p>
+                            </div>
+                            <p>
+                                Archie é audacioso, Veronica tem má reputação e Betty não deixa barato. Bem-vindo a uma nova era em Riverdale.
+                            </p>                   
+                        </div>
+
+                        <!--Filmes recomendados 6-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>2 temporada</span>
+                            </div>
+                                <img src="img/fotosemelhante6.webp" width="269px" alt=""> 
+                                <span>61% relevante</span>
+                                <div class="limite-idade">
+                                    <span>16</span> <p>2021</p>
+                                </div>
+                                <p>
+                                    Um garçom com medo de palco e uma universitária com problemas. Juntos, eles formam a dupla de dominadores perfeita.
+                                </p>                         
+                        </div>
+
+                        <!--Filmes recomendados 7-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>6 temporada</span>
+                            </div>
+                                <img src="img/fotosemelhante7.webp" width="269px" alt="">
+                                <span>96% relevante</span>
+                                <div class="limite-idade">
+                                    <span>16</span> <p>2020</p>
+                                </div>
+                                <p>
+                                    Uma professora de Direito dá aos alunos a chance de atuar em casos reais, e eles achaam envolvidos em um assassinato.
+                                </p>
+                        </div>
+
+                        <!--Filmes recomendados 8-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>2 temporada</span>
+                            </div>
+                                <img src="img/fotosemelhante8.webp" width="269px" alt="">
+                                <span style="color: #2F2F2F;">98% relevante</span>
+                                <div class="limite-idade">
+                                    <span>16</span> <p>2019</p>
+                                </div>
+                                <p>
+                                    A vingança não é uma coisa bonita. Mas quem disse que ela não cai muito bem com uma tiara de miss?
+                                </p>
+                        </div>
+
+                        <!--Filmes recomendados 9-->
+                        <div>
+                            <div class="t-s-span">
+                                <span></span> <span>1 temporada</span>
+                            </div>
+                                <img src="img/fotosemelhante9.webp" width="269px" alt="">
+                                <span>92% relevante</span>
+                                <div class="limite-idade">
+                                    <span>14</span> <p>2020</p>
+                                </div>
+                                <p>
+                                    Olá, tabalho dos sonhos! Adeus Chicago! Bonjour Paris! Só tem um porém: Ela não saber falar francês.Bom c'est la vie.
+                                </p>
+                        </div>
+                        
+                    </div>
+                    <!--Sobre o elenco-->
+                    <div class="sobre-suits">
+                        <p class="titulo-sobre-suits">Sobre Suits</p>
+                        <div>
+                            <span>Criação:</span><a href="">Aaron Korsh</a>
+                        </div>
+                        <div>
+                            <span>Elenco:</span><a href="">Gabriel Macht,</a><a href=""> Patrik J.Adams,</a><a href=""> Rick Hoffman, </a> <a href="">Meghan Markle, </a><a href="">Sarah Rafferty, </a><a href="">Gina Torres,</a><a href="">Amanda Schull, </a><a href="">Wendell Pierce, </a><a href="">Aloma Wright,</a><a href="">Katherine Heigl, </a><a href="">Dulé Hill, </a><a href="">Rachael Harris</a>
+                        </div>
+                       
+                       <div>
+                            <span>Gêneros:</span><a href=""> Séries dramaticas, </a><a href="">Comédias para TV,</a>
+                             <a href=""> Séries dos EUA</a>
+                        </div>
+                        <div>
+                             <span>Cenas e momentos: </span><a href=""> Espeituosos</a>
+                        </div>
+                        <div class="sobre-classificacao">
+                            <span>Classificação etária:</span> <span class="sobre-classificacao-span" style="color: #fff;">14</span> <p>Drogas, conteúdo sexual, linguagem imprópria e violência</p>
+                       </div>
+                   </div>
+
+                    </div>
+                  
+            </div>
+
+        </div>
+    </body>
+</html>

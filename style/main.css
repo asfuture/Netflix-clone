@@ -1,0 +1,380 @@
+:root{
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*Elemento base*/
+body{
+    background: var(--preta);
+    font-family:'Arial', Times, serif;
+    color: white;
+    align-items: center;
+}
+header .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Ariel Black',Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:#AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal */
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)100%), url('../img/capa-suits.jpg');
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+.botao i{
+    margin-right: 8px;
+}
+.container{
+    margin-left: 20px;
+}
+.filme-principal .container{
+    width: 60%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display:block;
+}
+.carrosel-filmes{
+    margin-top: 5px;
+}
+
+/* Modal*/
+#modal{
+    width: 900px;
+    background:#181818;
+    display: none; 
+    position: relative;
+    left: 250px;
+    bottom: 980px;
+    
+    z-index: 1; 
+}
+.modal-filmes{
+    margin-bottom: -4px;
+}
+.button-controle{
+    border: none;
+    background: var(--preta);
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 0px;
+    z-index: 4;
+
+}
+/* Controle dos botões*/
+.plus,.positive,.negative,.volume,.close{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid whitesmoke;
+    background-color:rgba(42, 42, 42, .6);
+    font-size:1.6rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+    color: none;
+    cursor: pointer;   
+}
+.volume_baixo{
+    display:none ;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid whitesmoke;
+    background-color:rgba(42, 42, 42, .6);
+    font-size:1.6rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+    color: none;
+    cursor: pointer; 
+    position: relative;
+    right: 00px;  
+}
+
+.close{
+    font-size: 40px;
+    color: var(--vermelho);
+    border: 2px solid var(--vermelho);
+    position: absolute;
+    right: 0;
+    
+}
+.assistir{
+    width: 200px;
+    height: 50px;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+    margin-right: 10px;
+    border-radius: 8%;
+    border: none;
+    cursor: pointer;
+    
+}
+/* Resumo da temporada e elenco*/
+.resumo{
+    display: flex;
+    margin: 30px;
+    margin-top: 60px;
+    background: #181818;
+}
+.temporada{
+    width: 600px;
+    height: 200px;
+    font-size: 16px;
+}
+.ano-temporada{
+    padding: 15px;
+    font-size: 16px;
+}
+.ano-temporada>span{
+    margin: 2px;
+    padding: 7px;
+    line-height:19px ;
+    color: #fff;
+    background: #E7792B;
+    border-radius: 6%;
+}
+.episodio-detalhe>h3{
+    font-size: 20px;
+    line-height:24px ;
+    margin: 25px 0px 15px 15px;
+}
+.episodio-detalhe>p{
+    font-size: 18px;
+    line-height: 27px;
+    margin: 10px 0px 0px 15px;
+}
+.descricao-serie{
+    width: 400px;
+    height: 200px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0px -15px 0px 0px ;
+    padding: 10px 40px 0px 50px;
+}
+.descricao-serie>div,.sobre-suits>div{
+    font-weight: normal;
+    margin-bottom: 14px;
+}
+.descricao-serie>div>span,.sobre-suits>div>span{
+    color: #777;
+    
+}
+.descricao-serie>div>a,.sobre-suits>div>a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.sobre-classificacao{
+    display: flex;
+justify-content: flex-start;
+}
+.sobre-classificacao-span{
+    font-weight: bold;
+    margin: -7px 15px 15px 15px;
+    padding: 7px;
+    font-size: 16px;
+    line-height:19px ;
+    color: white;
+    background: #E7792B;
+    border-radius: 6%;
+}
+.titulo-sobre-suits{
+    color: white;
+    font-size: 24px;
+    margin: 48px 0px 20px;
+}
+.episodios{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 10px;
+    margin: 0px 30px 0px 30px;
+}
+.p-episodio{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: Helvetica, sans-serif;
+    margin: 48px 0px 0px 20px;
+    
+}
+#seleciona{
+    width: 170px;
+    height:50px;
+    font-size: 18px;
+    color: #ffffff;
+    background:#242424;
+    position: relative;
+    border: 0.1em solid rgb(77, 77, 77);
+    border-radius: 0.2em;
+    margin: 48px 0px 0px 20px;
+    padding: 9px 18px;
+    cursor: pointer; 
+}
+#seleciona:hover{
+    border: 2px solid white;
+}
+/* Episodios e temporada*/
+.episodio-item{
+    margin: 30px;
+}
+.ep{
+    display: flex;
+    font-size: 16px;
+    border-radius: .25em;
+    border-bottom: 1px solid #404040;
+    margin:  10px;
+    padding: 16px 16px 16px 50px;
+    align-items: center;
+    cursor: pointer;
+}
+.ep:hover{
+    background: #333333;
+}
+.ep>h3{
+    margin-right: 20px;
+}
+.ep>img{
+    margin-right: 20px;
+    border-bottom: 3px solid red;
+}
+.ep>div>p{
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    line-height:20px;
+    padding: 0px 40px 14px 0px;
+    margin:0 1em 1em;
+}
+.titulo-ep{
+    display: flex;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    justify-content: space-between;
+    margin:15px 90px 15px 12px;
+}
+/* Filmes recomendados*/
+.t-semelhante{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 48px 0px 20px;
+}
+.grid-container{
+    display: grid;
+    row-gap: 15px;
+    grid-template-columns: auto auto auto ;
+    padding-bottom: 80px;
+    border-bottom: 2px solid #2F2F2F;
+    
+}
+.grid-container>div{
+    width: 270px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background: #2F2F2F;
+    border-bottom: 2px soli var(--preta);
+    border-radius: 1%;
+
+}
+.grid-container>div>img{
+    margin-bottom: 10px;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+}
+.grid-container>div>.t-s-span{
+    width:260px;
+    margin-top: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    
+}
+.grid-container>div>span{
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 12px;;
+    color: #41AD5C;
+}
+.grid-container>div>p{
+    color:#979797;
+    font-size: 16px;
+    padding: 0px 14px 14px;
+}
+.limite-idade{
+    width:100px;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.limite-idade>span{
+    font-weight: bold;
+    margin: 5px 15px 15px 15px;
+    padding: 9px;
+    
+    font-size: 16px;
+    line-height:19px ;
+    color: #fff;
+    background: #D7262D;
+    border-radius: 6%;
+}
+/* WRAPPER =  ENVOLOPAR* #E7792B/
